@@ -8,6 +8,14 @@ p_001() =
   m3 + m5 - m15
 }
 
+\\ Problem 2: Even Fibonacci Numbers
+p_002() =
+{
+  s = 0; i = 3;
+  while(s < 4000000, s += fibonacci(i); i += 3);
+  s
+}
+
 \\ Problem 3: Largest Prime Factor
 p_003() =
 {
