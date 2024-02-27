@@ -42,3 +42,11 @@ p_020() =
 {
   sumdigits(vecprod([2..100]))
 }
+
+\\ Problem 25: 1000-digit Fibonacci Number
+p_025() =
+{
+  i = 13;
+  while(fibonacci(i) < 10^999, i++);
+  i
+}
