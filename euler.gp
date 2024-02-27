@@ -36,3 +36,9 @@ p_010() =
   forprime(p = 2, 2000000, s += p);
   s
 }
+
+\\ Problem 20: Factorial Digit Sum
+p_020() =
+{
+  sumdigits(vecprod([2..100]))
+}
