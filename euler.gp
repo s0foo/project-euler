@@ -23,6 +23,12 @@ p_003() =
   f[#f]
 }
 
+\\ Problem 5: Smallest Multiple
+p_005() =
+{
+  lcm([1..20])
+}
+
 \\ Problem 7: 10001st Prime
 p_007() =
 {
