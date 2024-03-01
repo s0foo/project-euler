@@ -29,6 +29,12 @@ p_005() =
   lcm([1..20])
 }
 
+\\ Problem 6: Sum Square Difference
+p_006() =
+{
+  sum(x=1,100,x)^2 - sum(x=1,100,x^2)
+}
+
 \\ Problem 7: 10001st Prime
 p_007() =
 {
