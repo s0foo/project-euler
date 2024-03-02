@@ -49,6 +49,12 @@ p_010() =
   s
 }
 
+\\ Problem 16: Power Digit Sum
+p_016() =
+{
+  sumdigits(2^1000)
+}
+
 \\ Problem 20: Factorial Digit Sum
 p_020() =
 {
