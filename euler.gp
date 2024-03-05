@@ -1,3 +1,5 @@
+\r data.gp
+
 \\ Problem 1: Multiples of 3 or 5
 p_001() =
 {
@@ -39,6 +41,15 @@ p_006() =
 p_007() =
 {
   prime(10001)
+}
+
+\\ Problem 8: Largest Product in a Series
+p_008() =
+{
+  m = 0;
+  t = digits(d_008);
+  for(i = 1, #t-12, p = vecprod(t[i..i+12]); if(p > m, m = p));
+  m
 }
 
 \\ Problem 10: Summation of Primes
