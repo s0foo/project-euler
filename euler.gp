@@ -48,7 +48,7 @@ p_008() =
 {
   m = 0;
   t = digits(d_008);
-  for(i = 1, #t-12, p = vecprod(t[i..i+12]); if(p > m, m = p));
+  for(i = 1, #t-12, p = vecprod(t[i..i+12]); m = max(m,p));
   m
 }
 
