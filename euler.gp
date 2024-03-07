@@ -1,4 +1,5 @@
 \r data.gp
+\r utils.gp
 
 \\ Problem 1: Multiples of 3 or 5
 p_001() =
@@ -23,6 +24,16 @@ p_003() =
 {
   f = factor(600851475143)[,1];
   f[#f]
+}
+
+\\ Problem 4: Largest Palindrome Product
+p_004() =
+{
+  m = 0;
+  for(i = 100, 999,
+    for(j = i, 999, p = i*j; if(u_ispalindrome(p), m = max(m,p)))
+  );
+  m
 }
 
 \\ Problem 5: Smallest Multiple
