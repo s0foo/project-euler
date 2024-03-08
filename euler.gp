@@ -71,6 +71,14 @@ p_010() =
   s
 }
 
+\\ Problem 12: Highly Divisible Triangular Number
+p_012() =
+{
+  i = 1; t = 1;
+  while(#divisors(t) < 500, t += i++);
+  t
+}
+
 \\ Problem 13: Large Sum
 p_013() =
 {
