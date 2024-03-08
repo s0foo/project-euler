@@ -71,6 +71,13 @@ p_010() =
   s
 }
 
+\\ Problem 13: Large Sum
+p_013() =
+{
+  s = vecsum(d_013);
+  fromdigits(digits(s)[1..10])
+}
+
 \\ Problem 16: Power Digit Sum
 p_016() =
 {
