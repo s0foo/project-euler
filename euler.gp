@@ -63,6 +63,14 @@ p_008() =
   m
 }
 
+\\ Problem 9: Special Pythagorean Triplet
+p_009() =
+{
+  for(a = 1, 332, a2 = a^2;
+    for(b = a, (999 - a)/2, c = 1000 - a - b;
+      if (a2 + b^2 == c^2, a*b*c)))
+}
+
 \\ Problem 10: Summation of Primes
 p_010() =
 {
