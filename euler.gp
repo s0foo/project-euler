@@ -81,6 +81,20 @@ p_010() =
   s
 }
 
+\\ Problem 11: Largest Product in a Grid
+p_011() =
+{
+  m = 0;
+  for(j = 1, 17,
+    for(k = 1, 17,
+      m = max(d_011[k,j]*d_011[k+1,j+1]*d_011[k+2,j+2]*d_011[k+3,j+3],m);
+      m = max(d_011[k+3,j]*d_011[k+2,j+1]*d_011[k+1,j+2]*d_011[k,j+3],m));
+    for(i = 1, 20,
+      m = max(vecprod(d_011[i,][j..j+3]),m);
+      m = max(vecprod(d_011[,i][j..j+3]),m)));
+  m
+}
+
 \\ Problem 12: Highly Divisible Triangular Number
 p_012() =
 {
@@ -96,10 +110,25 @@ p_013() =
   fromdigits(digits(s)[1..10])
 }
 
+\\ Problem 15: Lattice Paths
+p_015() =
+{
+  binomial(40,20)
+}
+
 \\ Problem 16: Power Digit Sum
 p_016() =
 {
   sumdigits(2^1000)
+}
+
+\\ Problem 18: Maximum Path Sum I
+p_018() =
+{
+  t = Vecrev(d_018);
+  for(i = 1, 14,
+    for(j = 1, 15-i, t[i+1][j] += max(t[i][j],t[i][j+1])));
+  t[15]
 }
 
 \\ Problem 20: Factorial Digit Sum
@@ -114,4 +143,23 @@ p_025() =
   i = 13;
   while(fibonacci(i) < 10^999, i++);
   i
+}
+
+\\ Problem 41: Pandigital Prime
+p_041() =
+{
+  m = 0;
+  forprime(p = 2143, 987654321,
+    d = digits(p);
+    if(Set(d) == Set([1..#d]), m = p));
+  m
+}
+
+\\ Problem 67: Maximum Path Sum II
+p_067() =
+{
+  t = Vecrev(d_067);
+  for(i = 1, 99,
+    for(j = 1, 100-i, t[i+1][j] += max(t[i][j],t[i][j+1])));
+  t[100]
 }
