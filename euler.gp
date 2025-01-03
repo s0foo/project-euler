@@ -154,6 +154,16 @@ p_025() =
   i
 }
 
+\\ Problem 29: Distinct Powers
+p_029() =
+{
+  s = Set([]);
+  for(a = 2, 100,
+    for(b = 2, 100,
+      s = setunion(s, [a^b])));
+  #s
+}
+
 \\ Problem 30: Digit Fifth Powers
 p_030() =
 {
