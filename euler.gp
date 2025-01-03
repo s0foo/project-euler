@@ -154,6 +154,16 @@ p_025() =
   i
 }
 
+\\ Problem 30: Digit Fifth Powers
+p_030() =
+{
+  s = 0;
+  for(n = 2, 354294,
+    fp = apply(x->x^5, digits(n));
+    if(vecsum(fp) == n, s += n));
+  s
+}
+
 \\ Problem 41: Pandigital Prime
 p_041() =
 {
