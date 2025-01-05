@@ -174,6 +174,16 @@ p_030() =
   s
 }
 
+\\ Problem 34: Digit Factorials
+p_034() =
+{
+  s = 0;
+  for(n = 3, 1999999,
+    t = apply(x->factorial(x), digits(n));
+    if(vecsum(t) == n, s += n));
+  s
+}
+
 \\ Problem 41: Pandigital Prime
 p_041() =
 {
