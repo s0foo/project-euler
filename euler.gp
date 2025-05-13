@@ -110,6 +110,26 @@ p_013() =
   fromdigits(digits(s)[1..10])
 }
 
+\\ Problem 14: Longest Collatz Sequence
+p_014() =
+{
+  m = 0;
+  r = 0;
+  mp = Map();
+  for(i = 2, 1000000,
+    c = i;
+    l = 0;
+    while(c != 1,
+      if(mapisdefined(mp, c), l += mapget(mp, c); break);
+      if(Mod(c,2) == 0, c = c/2, c = 3*c + 1);
+      l += 1;
+    );
+    mapput(mp, i, l);
+    if(l > m, m = l; r = i);
+  );
+  r
+}
+
 \\ Problem 15: Lattice Paths
 p_015() =
 {
