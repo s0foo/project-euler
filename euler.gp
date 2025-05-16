@@ -142,6 +142,30 @@ p_016() =
   sumdigits(2^1000)
 }
 
+\\ Problem 17: Number Letter Counts
+p_017() =
+{
+  u = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"];
+  t = ["twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"];
+  h = #"hundred";
+  s = 0;
+
+  for(i = 1, #u, s += #u[i]);
+  for(i = 1, #t,
+      s += #t[i];
+      for(j = 1, 9, s += #t[i] + #u[j]));
+  for(i = 1, 9,
+      s += #u[i] + h;
+      for(j = 1, #u, s += #u[i] + h + 3 + #u[j]);
+      for(j = 1, #t,
+          s += #u[i] + h + 3 + #t[j];
+          for(k = 1, 9,
+              s+= #u[i] + h + 3 + #t[j] + #u[k]));
+  );
+  s += #u[1] + #"thousand";
+  s
+}
+
 \\ Problem 18: Maximum Path Sum I
 p_018() =
 {
