@@ -175,6 +175,17 @@ p_018() =
   t[15]
 }
 
+\\ Problem 19: Counting Sundays 
+p_019() =
+{
+  r = 0;
+  c = [1900,1,7];
+  while(c[1] < 2001,
+    if(c[1] > 1900 && c[3] == 1, r += 1);
+    c = u_nextsunday(c));
+  r
+}
+
 \\ Problem 20: Factorial Digit Sum
 p_020() =
 {
