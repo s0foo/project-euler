@@ -201,6 +201,45 @@ p_021() =
   s
 }
 
+\\ Problem 22: Names Scores
+p_022() =
+{
+  r = 0;
+  mp = Map();
+  mapput(mp, "A", 1);
+  mapput(mp, "B", 2);
+  mapput(mp, "C", 3);
+  mapput(mp, "D", 4);
+  mapput(mp, "E", 5);
+  mapput(mp, "F", 6);
+  mapput(mp, "G", 7);
+  mapput(mp, "H", 8);
+  mapput(mp, "I", 9);
+  mapput(mp, "J", 10);
+  mapput(mp, "K", 11);
+  mapput(mp, "L", 12);
+  mapput(mp, "M", 13);
+  mapput(mp, "N", 14);
+  mapput(mp, "O", 15);
+  mapput(mp, "P", 16);
+  mapput(mp, "Q", 17);
+  mapput(mp, "R", 18);
+  mapput(mp, "S", 19);
+  mapput(mp, "T", 20);
+  mapput(mp, "U", 21);
+  mapput(mp, "V", 22);
+  mapput(mp, "W", 23);
+  mapput(mp, "X", 24);
+  mapput(mp, "Y", 25);
+  mapput(mp, "Z", 26);
+  for(i = 1, #d_022,
+    s = 0;
+    chars = Vec(d_022[i]);
+    for(j = 1, #chars, s += mapget(mp, chars[j]));
+    r += i * s);
+  r
+}
+
 \\ Problem 25: 1000-digit Fibonacci Number
 p_025() =
 {
