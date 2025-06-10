@@ -15,3 +15,8 @@ u_nextsunday(c) =
   if(m > 12, m = 1; y += 1);
   [y, m, d]
 }
+
+u_abundantnumber(n) =
+{
+  if(vecsum(divisors(n)) > 2*n, 1, 0)
+}
