@@ -240,6 +240,22 @@ p_022() =
   r
 }
 
+\\ Problem 23: Non-Abundant Sums
+p_023() =
+{
+  s = 0; B = 28124;
+  l = [];
+  for(i = 12, B, if(u_abundantnumber(i), l = concat(l, i)));
+  L = Set(l);
+  for(n = 1, B,
+    w = 1;
+    for(i = 1, #l,
+      c = n - l[i];
+      if(setsearch(L, c), w = 0; break));
+    if(w, s += n));
+  s
+}
+
 \\ Problem 25: 1000-digit Fibonacci Number
 p_025() =
 {
