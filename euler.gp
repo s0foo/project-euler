@@ -256,6 +256,18 @@ p_023() =
   s
 }
 
+\\ Problem 24: Lexicographic Permutations
+p_024() =
+{
+  c = 0; r = 0;
+  forperm(10, p,
+    c += 1;
+    if(c == 1000000, f = p; break));
+  v = apply(x->x-1, Vec(f));
+  for (i = 1, #v, r = Str(r, v[i]));
+  eval(r)
+}
+
 \\ Problem 25: 1000-digit Fibonacci Number
 p_025() =
 {
