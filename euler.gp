@@ -276,6 +276,18 @@ p_025() =
   i
 }
 
+\\ Problem 27: Quadratic Primes
+p_027() =
+{
+  m = 0; r = 0;
+  for(a = -1000, 1000,
+    for(b = -1000, 1000,
+      l = 0; n = 0;
+      while(isprime(u_eulercandidate(n,a,b)), l += 1; n += 1);
+      if(l > m, m = l; r = a*b)));
+  r
+}
+
 \\ Problem 29: Distinct Powers
 p_029() =
 {

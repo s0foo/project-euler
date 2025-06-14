@@ -20,3 +20,8 @@ u_abundantnumber(n) =
 {
   if(vecsum(divisors(n)) > 2*n, 1, 0)
 }
+
+u_eulercandidate(n, a, b) =
+{
+  n^2 + a*n + b
+}
