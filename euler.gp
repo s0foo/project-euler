@@ -276,6 +276,17 @@ p_025() =
   i
 }
 
+\\ Problem 26: Reciprocal Cycles
+p_026() =
+{
+  m = 0; i = 0;
+  for(n = 2, 1000,
+    if(n%2 != 0 && n%5 != 0,
+      l = u_cyclelength(n);
+      if(l > m, m = l; i = n)));
+  i
+}
+
 \\ Problem 27: Quadratic Primes
 p_027() =
 {

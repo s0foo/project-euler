@@ -25,3 +25,10 @@ u_eulercandidate(n, a, b) =
 {
   n^2 + a*n + b
 }
+
+u_cyclelength(n) =
+{
+  r = 10; l = 0;
+  while(r != 10 || l < 1, r = (r%n) * 10; l += 1);
+  l
+}
