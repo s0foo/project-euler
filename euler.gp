@@ -299,6 +299,13 @@ p_027() =
   r
 }
 
+\\ Problem 28: Number Spiral Diagonals
+p_028() =
+{
+  n = 500;
+  16*n^3/3 + 10*n^2 + 26*n/3 + 1
+}
+
 \\ Problem 29: Distinct Powers
 p_029() =
 {
